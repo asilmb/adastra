@@ -6,10 +6,10 @@ namespace App\ValueObjects;
 
 class NotificationMetaData
 {
-    private string $icon = 'default.ico';
+    private string $icon;
     private bool $isActive;
 
-    public function __construct(string $icon, bool $isActive)
+    public function __construct(bool $isActive, string $icon = 'default.ico')
     {
         $this->icon = $icon;
         $this->isActive = $isActive;
@@ -30,6 +30,5 @@ class NotificationMetaData
     {
         return $this->isActive;
     }
-
 
 }
