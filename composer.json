@@ -27,9 +27,12 @@
             "codestyle": "@codestyle",
             "test": "@test"
         },
-        "fix": "phpcbf",
+        "fix": "phpcbf ./src",
         "test": ["docker exec adastra php ./vendor/bin/phpunit tests/" ],
         "export": ["docker exec adastra bash ./export.sh -v /var/www/assets/config.xml" ]
 
+    },
+    "require": {
+        "squizlabs/php_codesniffer": "*"
     }
 }
